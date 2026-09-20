@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "componentName": "AchievementItem",
+    "filePath": "src/components/ui/AchievementItem.tsx"
+  },
+  "sourceHash": "c7e81d490f140f13f890ac99a2f847ffecd9d144c443e4cbf227cb35da7c6417",
+  "codeProperties": {
+    "award": {
+      "type": {
+        "name": "other",
+        "value": "figma-reference"
+      },
+      "control": false
+    }
+  }
+}

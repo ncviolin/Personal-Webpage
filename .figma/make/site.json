@@ -1,0 +1,11 @@
+{
+  "title": "Nathania Chen",
+  "description": "Creates a premium, fully responsive personal website with SEO, accessibility, and easy content updates to showcase professional branding and achievements.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

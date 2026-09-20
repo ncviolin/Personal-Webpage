@@ -1,0 +1,124 @@
+@import '@figma/astraui/styles.css';
+@import 'tailwindcss';
+
+/* ── Font faces ─────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/PlayfairDisplay_wght__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/PlayfairDisplay-Italic_wght__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://static.figma.com/font/DMMono-Regular_1') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://static.figma.com/font/DMMono-Medium_1') format('woff2');
+}
+
+/* ── Design tokens ──────────────────────────────────────────────────────── */
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+
+  --color-background: #FAFAF9;
+  --color-foreground: #141414;
+  --color-card: #F4F3F0;
+  --color-card-foreground: #141414;
+  --color-primary: #1C3557;
+  --color-primary-foreground: #FAFAF9;
+  --color-secondary: #F0EFED;
+  --color-secondary-foreground: #3A3A3A;
+  --color-muted: #EBEBEA;
+  --color-muted-foreground: #6B6863;
+  --color-accent: #B8965A;
+  --color-accent-foreground: #141414;
+  --color-border: #E2E0DC;
+  --color-ring: #1C3557;
+}
+
+/* ── Base resets ────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  background-color: #FAFAF9;
+  color: #141414;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D4D1CC; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B8B5AF; }
+
+/* ── Focus rings ────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #1C3557;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Scroll offset for fixed nav (68px bar + 12px breathing room) ───────── */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ── Scroll-reveal animation ────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Selection color ────────────────────────────────────────────────────── */
+::selection {
+  background: #1C3557;
+  color: #FAFAF9;
+}
